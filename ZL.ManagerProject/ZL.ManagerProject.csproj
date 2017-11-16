@@ -518,7 +518,7 @@
     <Content Include="Content\bootstrap-3.3.7\_config.yml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\IndexMaster.cshtml" />
+    <Content Include="Views\Shared\IndexMaster.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Index\Index.cshtml" />
