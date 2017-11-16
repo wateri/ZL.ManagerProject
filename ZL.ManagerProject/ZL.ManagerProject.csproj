@@ -112,6 +112,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\IndexController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -356,6 +357,7 @@
     <Content Include="Content\bootstrap-3.3.7\js\tooltip.js" />
     <Content Include="Content\bootstrap-3.3.7\js\transition.js" />
     <Content Include="Content\bootstrap-3.3.7\package.js" />
+    <Content Include="Content\jquery\jquery.min.js" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -368,7 +370,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
@@ -515,6 +516,12 @@
     <Content Include="Content\bootstrap-3.3.7\package.json" />
     <Content Include="Content\bootstrap-3.3.7\README.md" />
     <Content Include="Content\bootstrap-3.3.7\_config.yml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\IndexMaster.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Index\Index.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
