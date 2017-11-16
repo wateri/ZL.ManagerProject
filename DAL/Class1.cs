@@ -6,6 +6,6 @@ using System.Text;
 namespace DAL
 {
     public class Class1
-    {
+    { 
     }
 }
