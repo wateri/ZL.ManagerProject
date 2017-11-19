@@ -1,0 +1,68 @@
+﻿@using System.Data;
+@{
+    ViewBag.Title = "Gallery";
+    Layout = "~/Views/Shared/IndexMaster.cshtml";
+}
+
+
+<!-- **********************************************************************************************************************************************************
+MAIN CONTENT
+*********************************************************************************************************************************************************** -->
+<!--main content start-->
+
+<section class="wrapper site-min-height">
+    <h3><i class="fa fa-angle-right"></i> 我的相册</h3>
+    <hr>
+
+    @foreach (System.Data.DataRow item in Model.Rows)
+    {
+        <div class="row mt">
+            @if (@item["PICTURENAME1"].ToString() != "")
+            {
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 desc">
+                    <div class="project-wrapper">
+                        <div class="project">
+                            <div class="photo-wrapper">
+                                <div class="photo">
+                                    <a class="fancybox" href="~/Content/assets/img/portfolio/@item["PICTURENAME1"]"><img class="img-responsive" src="~/Content/assets/img/portfolio/@item["PICTURENAME1"]" alt=""></a>
+                                </div>
+                                <div class="overlay"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- col-lg-4 -->
+            }
+            @if (@item["PICTURENAME2"].ToString() != "")
+            {
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 desc">
+                    <div class="project-wrapper">
+                        <div class="project">
+                            <div class="photo-wrapper">
+                                <div class="photo">
+                                    <a class="fancybox" href="~/Content/assets/img/portfolio/@item["PICTURENAME2"]"><img class="img-responsive" src="~/Content/assets/img/portfolio/@item["PICTURENAME2"]" alt=""></a>
+                                </div>
+                                <div class="overlay"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- col-lg-4 -->
+            }
+            @if (@item["PICTURENAME3"].ToString() != "")
+            {
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 desc">
+                    <div class="project-wrapper">
+                        <div class="project">
+                            <div class="photo-wrapper">
+                                <div class="photo">
+                                    <a class="fancybox" href="~/Content/assets/img/portfolio/@item["PICTURENAME3"]"><img class="img-responsive" src="~/Content/assets/img/portfolio/@item["PICTURENAME3"]" alt=""></a>
+                                </div>
+                                <div class="overlay"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- col-lg-4 -->
+            }
+        </div><!-- /row -->
+    }
+
+</section>

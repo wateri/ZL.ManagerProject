@@ -1,7 +1,11 @@
-﻿@{
+﻿@using ZL.ManagerProject.Common
+@{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/IndexMaster.cshtml";
 }
-
-<h2>Index</h2>
-<div>这是测试母版页</div>
+@if (ViewContext.RouteData.Values["ID"] != null)
+{
+    CommonInfo.UserName = ViewContext.RouteData.Values["ID"].ToString();
+}
+<h2>@CommonInfo.UserName</h2>
+<h4>欢迎您！</h4>
