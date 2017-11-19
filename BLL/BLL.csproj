@@ -44,7 +44,9 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="GalleryBLL.cs" />
-    <Compile Include="LoginBLL.cs" />
+    <Compile Include="LoginBLL.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="MenuManagerBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -528,6 +528,9 @@
     <Content Include="Content\js\raphael-min.js" />
     <Content Include="Content\js\tmpl.js" />
     <Content Include="Global.asax" />
+    <Content Include="Views\UploadPicture\UploadPicture.cshtml">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -748,9 +751,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Gallery\Gallery.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\UploadPicture\UploadPicture.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrapFileInput\fonts\icomoon.eot" />
