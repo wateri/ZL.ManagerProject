@@ -7,6 +7,6 @@ namespace ZL.ManagerProject.Common
 {
     public static class UserMenu
     {
-        //public DataTable MenuTab { get; set; }
+        public static List<string> MenuTab { get; set; }
     }
 }

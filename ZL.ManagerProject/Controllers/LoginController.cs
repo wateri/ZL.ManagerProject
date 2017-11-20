@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using BLL;
 using System.Data;
+using ZL.ManagerProject.Common;
 namespace ZL.ManagerProject.Controllers
 {
     public class LoginController : Controller
@@ -24,6 +25,14 @@ namespace ZL.ManagerProject.Controllers
             DataSet dsUser = bll.Login(username, pwd);
             if (dsUser.Tables[0].Rows.Count > 0)
             {
+                MenuManagerBLL mbll = new MenuManagerBLL();
+                DataSet dsMenu = mbll.GetData(dsUser.Tables[0].Rows[0]["USERID"].ToString());
+                UserMenu.MenuTab = new List<string>();
+                foreach (DataRow item in dsMenu.Tables[0].Rows)
+                {
+                    UserMenu.MenuTab.Add(item["MENUID"].ToString());
+                }
+             
                 return Redirect("/Index/Index/" + username + "");
             }
             else

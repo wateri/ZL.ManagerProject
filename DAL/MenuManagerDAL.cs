@@ -15,23 +15,21 @@ namespace DAL
         }
 
 
-//        public DataSet Login(string username, string pwd)
-//        {
-//            try
-//            {
-//                string sql = "SELECT USERID, USERNAME, PASSWORDS, PRIVILEGE" +
-//"FROM T_USERS WHERE USERNAME=@USERNAME AND PASSWORDS=@PWD";
-//                QueryParameterList para = new QueryParameterList();
-//                para.Add("@USERNAME", username);
-//                para.Add("@PWD", pwd);
-//                return data.ExecuteDataSet(sql, para);
-//            }
-//            catch (Exception ex)
-//            {
-//                throw ex;
-//            }
+        public DataSet GetData(string userid)
+        {
+            try
+            {
+                string sql = "SELECT USERID, MENUID FROM dbo.T_MENUATTACH WHERE USERID=@USERID";
+                QueryParameterList para = new QueryParameterList();
+                para.Add("@USERID", userid);
+                return data.ExecuteDataSet(sql, para);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
 
-//        }
+        }
 
     }
 }
