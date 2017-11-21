@@ -26,7 +26,7 @@ VALUES (@ID, @PICTURENAME, @PATH, @UPLOADDATE, @UPLOADUSER) ";
                 {
 
                     ParamField[] para = new ParamField[5];
-                    para[0] = new ParamField("@DISCARDNO", "ID");
+                    para[0] = new ParamField("@ID", "ID");
                     para[1] = new ParamField("@PICTURENAME", "FILENAME");
                     para[2] = new ParamField("@PATH", "PATH");
                     para[3] = new ParamField("@UPLOADDATE", "DATE");

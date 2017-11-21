@@ -40,9 +40,21 @@
             <form class="form-login" action="/Login/Login" method="post">
                 <h2 class="form-login-heading">登录</h2>
                 <div class="login-wrap">
-                    <input type="text" name="username" class="form-control" placeholder="用户名" autofocus>
-                    <br>
-                    <input type="password" name="pwd" class="form-control" placeholder="密码">
+
+                    @{
+                        HttpCookie cookie = System.Web.HttpContext.Current.Request.Cookies.Get("zl_cookie");
+                        string username = "";
+                        string pwd = "";
+                        if (cookie != null)
+                        {
+                            username = cookie.Values[0];
+                            pwd = cookie.Values[1];
+
+                        }
+                        <input type="text" name="username" class="form-control" placeholder="用户名" autofocus value="@username">
+                        <br>
+                        <input type="password" name="pwd" class="form-control" placeholder="密码" value="@pwd">
+                    }
                     <label class="checkbox">
                         <span class="pull-left">
                             <a data-toggle="modal" name="loginfail" style="color:red">@ViewData["loginfail"]</a>
@@ -106,10 +118,8 @@
     <script type="text/javascript" src="~/Content/assets/js/jquery.backstretch.min.js"></script>
     <script>
         $.backstretch("../Content/assets/img/login-bg.jpg", { speed: 500 });
-        //$.cookie('the_cookie', 'the_value', { expires: 7, path: '/' });
     </script>
 
 
 </body>
 </html>
-

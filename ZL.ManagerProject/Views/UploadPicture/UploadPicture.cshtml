@@ -23,29 +23,35 @@
 </form>
 
 <script>
-    $('#file-zh').fileinput({
-        language: 'zh',
-        uploadUrl: '',
-        allowedFileExtensions: ['jpg', 'png', 'gif'],
-        uploadExtraData:function (previewId, index) { 
-            var obj = {}; 
-            $('#addForm').find('input').each(function() { 
-                var id = $(this).attr('id'), val = $(this).val(); 
-                obj[id] = val; 
-            }); 
-            return obj; 
-        } 
-    });
+        var control = $('#file-zh');
+        control.fileinput({
+            language: 'zh', //设置语言
+            uploadUrl: "/UploadPicture/UploadPicture", //上传的地址
+            allowedFileExtensions: ['jpg', 'png', 'gif'],//接收的文件后缀
+            uploadAsync: true, //默认异步上传
+            showUpload: true, //是否显示上传按钮
+            showCaption: true,//是否显示标题
+            maxFileCount: 10,
+            browseClass: "btn btn-primary", //按钮样式  
+            validateInitialCount: true
+        });
+
 
     $(document).ready(function () {
         $("#test-upload").fileinput({
-            'showPreview': false,
+            'showPreview': true,
             'allowedFileExtensions': ['jpg', 'png', 'gif'],
             'elErrorContainer': '#errorBlock'
         });
         
-        $("#test-upload").on('fileloaded', function(event, file, previewId, index) {
-            alert('i = ' + index + ', id = ' + previewId + ', file = ' + file.name);
+        $("#file-zh").on('fileloaded', function (event, file, previewId, index) {
+            var response = data.response;
+            if (response == "上传成功") {
+                alert("上传成功");
+            }
+            else {
+                alert("上传失败");
+            }
         });
         
     });

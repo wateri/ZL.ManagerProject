@@ -35,7 +35,13 @@
 </head>
 
 <body>
-
+    @{
+        HttpCookie cookie = System.Web.HttpContext.Current.Request.Cookies.Get("zl_cookie");
+        if (cookie == null)
+        {
+            Response.Redirect("/Login/Login");
+        }
+    }
     <section id="container">
         <!-- **********************************************************************************************************************************************************
         TOP BAR CONTENT & NOTIFICATIONS
@@ -277,6 +283,7 @@
         <section id="main-content">
             <section class="wrapper" style="height:535px; ">
                 @RenderBody()
+                
             </section>
         </section>
         <!--main content end-->
@@ -346,6 +353,7 @@
         });
     </script>
 
+    }
     <script type="text/javascript">
         //custom select box
 
