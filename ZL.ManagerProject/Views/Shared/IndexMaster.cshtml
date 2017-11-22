@@ -37,7 +37,7 @@
 <body>
     @{
         HttpCookie cookie = System.Web.HttpContext.Current.Request.Cookies.Get("zl_cookie");
-        if (cookie == null)
+        if (cookie == null || UserMenu.MenuTab==null)
         {
             Response.Redirect("/Login/Login");
         }
