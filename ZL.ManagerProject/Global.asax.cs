@@ -21,7 +21,7 @@ namespace ZL.ManagerProject
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
 
-            ServerDataInfo.SqlDataAddress = "Server=localhost;Database=BadmintonManager;User=sa;Pwd=water";
+            ServerDataInfo.SqlDataAddress = "Server=192.168.0.24;Database=BadmintonManager;User=sa;Pwd=123456";
             string dataBaseType = "DataBaseType.MSSQLSERVER";
             switch (dataBaseType)
             {

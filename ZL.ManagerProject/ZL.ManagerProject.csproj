@@ -41,7 +41,7 @@
   <ItemGroup>
     <Reference Include="DataAccessLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\DataAccessLib\DataAccessLib\bin\Debug\DataAccessLib.dll</HintPath>
+      <HintPath>..\..\公共程序集\DataAccessLib.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
@@ -758,6 +758,9 @@
     <Content Include="Content\bootstrapFileInput\fonts\icomoon.ttf" />
     <Content Include="Content\bootstrapFileInput\fonts\icomoon.woff" />
     <Content Include="Content\bootstrapFileInput\sass\fileinput.scss" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\PublishProfiles\ZL.Web.config.pubxml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
