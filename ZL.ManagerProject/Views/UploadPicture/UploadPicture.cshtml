@@ -36,24 +36,11 @@
             validateInitialCount: true
         });
 
-
-    $(document).ready(function () {
-        $("#test-upload").fileinput({
-            'showPreview': true,
-            'allowedFileExtensions': ['jpg', 'png', 'gif'],
-            'elErrorContainer': '#errorBlock'
-        });
         
-        $("#file-zh").on('fileloaded', function (event, file, previewId, index) {
+        $("#file-zh").on('fileuploaded', function (event, data, previewId, index) {
             var response = data.response;
-            alert(response);
-            if (response == "上传成功") {
-                alert("上传成功");
-            }
-            else {
-                alert("上传失败");
-            }
+
+            alert(data.success);
         });
-        
-    });
+
 </script>
